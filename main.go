@@ -2,9 +2,9 @@ package main
 
 import "C"
 import (
-	"github.com/marcetin/wingcal/kalkulator"
+	"github.com/marcetin/vin/novcanik"
 )
 
 func main() {
-	kalkulator.C()
+	novcanik.C()
 }

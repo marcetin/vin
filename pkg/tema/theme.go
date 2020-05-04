@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Unlicense OR MIT
 
-package gelook
+package tema
 
 import (
 	"gioui.org/font"

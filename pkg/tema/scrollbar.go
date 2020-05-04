@@ -1,4 +1,4 @@
-package gelook
+package tema
 
 import (
 	"image"
@@ -6,7 +6,7 @@ import (
 	"gioui.org/io/pointer"
 	"gioui.org/layout"
 	"gioui.org/unit"
-	"github.com/marcetin/wingcal/pkg/gel"
+	"github.com/marcetin/vin/pkg/gel"
 )
 
 var (

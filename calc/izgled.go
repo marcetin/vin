@@ -6,7 +6,7 @@ import (
 	"gioui.org/unit"
 	"github.com/gioapp/gel"
 	"github.com/gioapp/gelook"
-	"github.com/marcetin/wingcal/model"
+	"github.com/marcetin/vin/model"
 )
 
 var (

@@ -1,8 +1,8 @@
-package kalkulator
+package novcanik
 
 import (
 	"gioui.org/layout"
-	"github.com/marcetin/wingcal/calc"
+	"github.com/marcetin/vin/calc"
 )
 
 func kalkulator(w *calc.WingCal) func() {

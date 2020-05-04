@@ -1,8 +1,8 @@
-package gelook
+package tema
 
 import (
 	"gioui.org/layout"
-	"github.com/marcetin/wingcal/pkg/gel"
+	"github.com/marcetin/vin/pkg/gel"
 )
 
 var (

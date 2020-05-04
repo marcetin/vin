@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"gioui.org/layout"
 	"github.com/gioapp/gelook"
-	"github.com/marcetin/wingcal/model"
+	"github.com/marcetin/vin/model"
 )
 
 func (w *WingCal) PrikazaniElementIzgled() func() {

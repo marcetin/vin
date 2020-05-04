@@ -3,7 +3,7 @@ package db
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/marcetin/wingcal/model"
+	"github.com/marcetin/vin/model"
 	scribble "github.com/nanobox-io/golang-scribble"
 	"golang.org/x/text/unicode/norm"
 	"unicode"

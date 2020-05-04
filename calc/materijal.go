@@ -1,7 +1,7 @@
 package calc
 
 import (
-	"github.com/marcetin/wingcal/model"
+	"github.com/marcetin/vin/model"
 )
 
 func (w *WingCal) NewMaterijal() {

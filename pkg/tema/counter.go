@@ -1,4 +1,4 @@
-package gelook
+package tema
 
 import (
 	"strconv"
@@ -9,7 +9,7 @@ import (
 	"gioui.org/op/paint"
 	"gioui.org/text"
 	"gioui.org/unit"
-	"github.com/marcetin/wingcal/pkg/gel"
+	"github.com/marcetin/vin/pkg/gel"
 )
 
 type DuoUIcounter struct {

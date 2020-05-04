@@ -1,9 +1,9 @@
 // SPDX-License-Identifier: Unlicense OR MIT
 
-package gelook
+package tema
 
 import (
-	"github.com/marcetin/wingcal/pkg/gel"
+	"github.com/marcetin/vin/pkg/gel"
 
 	"gioui.org/layout"
 	"gioui.org/op/paint"

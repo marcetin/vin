@@ -6,8 +6,8 @@ import (
 	"gioui.org/text"
 	"github.com/gioapp/gel"
 	"github.com/gioapp/gelook"
-	"github.com/marcetin/wingcal/db"
-	"github.com/marcetin/wingcal/model"
+	"github.com/marcetin/vin/db"
+	"github.com/marcetin/vin/model"
 )
 
 var (

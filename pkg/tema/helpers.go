@@ -1,4 +1,4 @@
-package gelook
+package tema
 
 import (
 	"fmt"

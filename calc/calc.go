@@ -3,7 +3,7 @@ package calc
 import (
 	"fmt"
 	"github.com/gioapp/gel"
-	"github.com/marcetin/wingcal/model"
+	"github.com/marcetin/vin/model"
 )
 
 func (w *WingCal) GenerisanjeLinkova(radovi map[int]model.WingVrstaRadova) {
