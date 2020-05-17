@@ -1,13 +1,13 @@
-package calc
+package vincoin
 
 import (
 	"gioui.org/app"
 	"gioui.org/layout"
 	"gioui.org/text"
 	"github.com/gioapp/gel"
-	"github.com/gioapp/gelook"
 	"github.com/marcetin/vin/db"
 	"github.com/marcetin/vin/model"
+	"github.com/marcetin/vin/pkg/tema"
 )
 
 var (
@@ -40,20 +40,19 @@ var (
 	}
 )
 
-type WingCal struct {
+type VinCoin struct {
 	Naziv                    string
 	Window                   *app.Window
 	Context                  *layout.Context
-	Tema                     *gelook.DuoUItheme
+	Tema                     *tema.DuoUItheme
 	Strana                   string
 	Edit                     bool
 	LinkoviIzboraVrsteRadova map[int]*gel.Button
 	EditPolja                *model.EditabilnaPoljaVrsteRadova
 	Materijal                map[int]*model.WingMaterijal
 	Radovi                   model.WingVrstaRadova
-	Putanja                  []*model.WingVrstaRadova
 	IzbornikRadova           *model.WingVrstaRadova
-	Transfered               model.WingCalGrupaRadova
+	Transfered               model.VinCoinGrupaRadova
 	Db                       *db.DuoUIdb
 	Client                   *model.Client
 	PrikazaniElement         *model.WingVrstaRadova

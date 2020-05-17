@@ -58,15 +58,15 @@ type WingIzabraniElement struct {
 	Element  WingVrstaRadova
 }
 
-type WingCalGrupaRadova struct {
+type VinCoinGrupaRadova struct {
 	Id       string                  `json:"id"`
 	Slug     string                  `json:"slug"`
 	Elementi map[int]WingVrstaRadova `json:"elementi"`
 }
 
-type WingCalEcommands map[int]WingCalEcommand
+type VinCoinEcommands map[int]VinCoinEcommand
 
-type WingCalEcommand struct {
+type VinCoinEcommand struct {
 	Id       string
 	Type     string
 	Name     string      `json:"name"`

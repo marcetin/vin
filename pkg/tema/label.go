@@ -3,7 +3,7 @@
 package tema
 
 import (
-	"github.com/marcetin/vin/pkg/gel"
+	"github.com/gioapp/gel"
 
 	"gioui.org/layout"
 	"gioui.org/op/paint"

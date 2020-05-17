@@ -16,7 +16,7 @@ type DuoUIdb struct {
 }
 
 type Ddb interface {
-	//DbReadAllTypes()map[int]model.WingCalGrupaRadova
+	//DbReadAllTypes()map[int]model.VinCoinGrupaRadova
 	DbRead(folder, name string) model.WingVrstaRadova
 	DbReadAll(folder string) map[int]model.WingVrstaRadova
 	DbWrite(folder, name string, data interface{})
@@ -45,8 +45,8 @@ var safe = []*unicode.RangeTable{
 
 var _ Ddb = &DuoUIdb{}
 
-//func (d *DuoUIdb) DbReadAllTypes() map[int]model.WingCalGrupaRadova{
-//	items := make(map[int]model.WingCalGrupaRadova)
+//func (d *DuoUIdb) DbReadAllTypes() map[int]model.VinCoinGrupaRadova{
+//	items := make(map[int]model.VinCoinGrupaRadova)
 //	//types := []string{"assets", "config", "apps"}
 //
 //	//for t := range types {

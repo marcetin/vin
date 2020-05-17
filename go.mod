@@ -6,13 +6,14 @@ require (
 	gioui.org v0.0.0-20200320195817-a3101c9454b7
 	gioui.org/cmd v0.0.0-20200320195817-a3101c9454b7 // indirect
 	github.com/clbanning/x2j v0.0.0-20191024224557-825249438eec // indirect
-	github.com/gioapp/fonts v0.0.0-20200409222643-fe2f7511f609 // indirect
+	github.com/gioapp/fonts v0.0.0-20200409222643-fe2f7511f609
 	github.com/gioapp/gel v0.0.0-20200409221700-20b9d9a366f9
 	github.com/gioapp/gelook v0.0.0-20200409222352-89e6beb344a9
 	github.com/gorilla/mux v1.7.4 // indirect
 	github.com/jcelliott/lumber v0.0.0-20160324203708-dd349441af25 // indirect
 	github.com/jung-kurt/gofpdf v1.16.2
 	github.com/nanobox-io/golang-scribble v0.0.0-20190309225732-aa3e7c118975
+	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 	github.com/p9c/cms v0.0.0-20200311052948-c621afb2fbc8 // indirect
 	github.com/p9c/logi v0.0.17 // indirect
 	github.com/p9c/pod v0.2.23 // indirect
