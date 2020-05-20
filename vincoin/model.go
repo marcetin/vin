@@ -11,7 +11,7 @@ import (
 )
 
 var (
-	izbornikRadova = &layout.List{
+	изборникРадова = &layout.List{
 		Axis: layout.Vertical,
 	}
 	sumList = &layout.List{
@@ -40,12 +40,12 @@ var (
 	}
 )
 
-type VinCoin struct {
-	Naziv                    string
+type ВинКоин struct {
+	Назив                    string
 	Window                   *app.Window
 	Context                  *layout.Context
-	Tema                     *tema.DuoUItheme
-	Strana                   string
+	Тема                     *tema.DuoUItheme
+	Страна                   string
 	Edit                     bool
 	LinkoviIzboraVrsteRadova map[int]*gel.Button
 	EditPolja                *model.EditabilnaPoljaVrsteRadova
@@ -54,7 +54,7 @@ type VinCoin struct {
 	IzbornikRadova           *model.WingVrstaRadova
 	Transfered               model.VinCoinGrupaRadova
 	Db                       *db.DuoUIdb
-	Client                   *model.Client
+	Клијент                  *model.Клијент
 	PrikazaniElement         *model.WingVrstaRadova
 	Suma                     *model.WingIzabraniElementi
 }

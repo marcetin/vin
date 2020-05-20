@@ -5,14 +5,14 @@ import (
 	"net"
 )
 
-type Client struct {
+type Клијент struct {
 	Socket net.Conn
 	data   chan []byte
 }
 
 type WingVrstaRadova struct {
 	Id                 int                            `json:"id"`
-	Naziv              string                         `json:"naziv"`
+	Назив              string                         `json:"naziv"`
 	Opis               string                         `json:"opis"`
 	Obracun            string                         `json:"obracun"`
 	Jedinica           string                         `json:"jedinica"`
@@ -35,7 +35,7 @@ type WingIzabraniElementi struct {
 
 type WingMaterijal struct {
 	Id        int
-	Naziv     string  `json:"naziv"`
+	Назив     string  `json:"naziv"`
 	Opis      string  `json:"opis"`
 	Obracun   string  `json:"obracun"`
 	Jedinica  string  `json:"jedinica"`
@@ -78,7 +78,7 @@ type VinCoinEcommand struct {
 }
 type EditabilnaPoljaVrsteRadova struct {
 	Id        *gel.Editor
-	Naziv     *gel.Editor
+	Назив     *gel.Editor
 	Opis      *gel.Editor
 	Obracun   *gel.Editor
 	Jedinica  *gel.Editor

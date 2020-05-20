@@ -8,13 +8,13 @@ var (
 	IzborVrsteRadovaPanelElement = gel.NewPanel()
 )
 
-func (v *VinCoin) Nazad() func() {
+func (в *ВинКоин) Назад() func() {
 	return func() {
-		btnNazad := v.Tema.Button("NAZAD")
-		//btnNazad.Background = tema.HexARGB(v.Tema.Colors["Secondary"])
-		for nazadDugme.Clicked(v.Context) {
-			v.Strana = "Naslovna"
+		btnNazad := в.Тема.Button("NAZAD")
+		//btnNazad.Background = tema.HexARGB(в.Тема.Colors["Secondary"])
+		for nazadDugme.Clicked(в.Context) {
+			в.Страна = "Naslovna"
 		}
-		btnNazad.Layout(v.Context, nazadDugme)
+		btnNazad.Layout(в.Context, nazadDugme)
 	}
 }

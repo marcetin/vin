@@ -27,7 +27,7 @@ require (
 	github.com/stretchr/tracer v0.0.0-20140124184152-66d3696bba97 // indirect
 	github.com/ugorji/go v1.1.7 // indirect
 	golang.org/x/exp v0.0.0-20200320212757-167ffe94c325
-	golang.org/x/image v0.0.0-20200119044424-58c23975cae1 // indirect
+	golang.org/x/image v0.0.0-20200430140353-33d19683fad8
 	golang.org/x/text v0.3.2
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
 )

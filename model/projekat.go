@@ -2,7 +2,7 @@ package model
 
 type WingProjekat struct {
 	Id                  int    `json:"id"`
-	Naziv               string `json:"naziv"`
+	Назив               string `json:"naziv"`
 	Opis                string `json:"opis"`
 	IdProjekta          string `json:"id_projekta"`
 	BrojDokumenta       string `json:"broj_dokumenta"`
@@ -31,7 +31,7 @@ type WingObjekat struct {
 }
 
 type WingInvestitor struct {
-	NazivInvestitora         string `json:"naziv_investitora"`
+	НазивInvestitora         string `json:"naziv_investitora"`
 	LokacijaInvestitoraUlica string `json:"lokacija_investitora_ulica"`
 	LokacijaInvestitoraBroj  string `json:"lokacija_investitora_broj"`
 	LokacijaInvestitoraGrad  string `json:"lokacija_investitora_grad"`
@@ -43,7 +43,7 @@ type WingInvestitor struct {
 }
 
 type WingProjektant struct {
-	NazivProjektanta         string `json:"naziv_projektanta"`
+	НазивProjektanta         string `json:"naziv_projektanta"`
 	LokacijaProjektantaUlica string `json:"lokacija_projektanta_ulica"`
 	LokacijaProjektantaBroj  string `json:"lokacija_projektanta_broj"`
 	LokacijaProjektantaGrad  string `json:"lokacija_projektanta_grad"`

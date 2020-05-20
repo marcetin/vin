@@ -33,9 +33,9 @@ var (
 	racunBtn             = new(gel.Button)
 	novostiBtn           = new(gel.Button)
 	stanjenaracunuBtn    = new(gel.Button)
-	novauplataBtn        = new(gel.Button)
-	aktuelnaglasanjaBtn  = new(gel.Button)
-	rezultatiglasanjaBtn = new(gel.Button)
+	novaуплатаBtn        = new(gel.Button)
+	aktuelnaгласањаBtn   = new(gel.Button)
+	rezultatiгласањаBtn  = new(gel.Button)
 	proveraidentitetaBtn = new(gel.Button)
 	podesavanjaBtn       = new(gel.Button)
 
@@ -44,8 +44,8 @@ var (
 	prijazalsBtn    = new(gel.Button)
 )
 
-func C() {
-	vin := vincoin.NewVinCoin()
+func ВИН() {
+	vin := vincoin.НовиВинКоин()
 
 	go func() {
 
@@ -53,7 +53,7 @@ func C() {
 		for e := range vin.Window.Events() {
 			if e, ok := e.(system.FrameEvent); ok {
 				vin.Context.Reset(e.Config, e.Size)
-				tema.DuoUIfill(vin.Context, vin.Tema.Colors["Light"])
+				tema.DuoUIfill(vin.Context, vin.Тема.Colors["Light"])
 				layout.Flex{
 					Axis: layout.Vertical,
 				}.Layout(vin.Context,
@@ -62,23 +62,23 @@ func C() {
 							Axis: layout.Horizontal,
 						}.Layout(vin.Context,
 							layout.Rigid(func() {
-								vin.Tema.Icons["Grab"].Color = tema.HexARGB("ff444fcf")
-								vin.Tema.Icons["Grab"].Layout(vin.Context, unit.Px(float32(32)))
+								vin.Тема.Icons["Grab"].Color = tema.HexARGB("ff444fcf")
+								vin.Тема.Icons["Grab"].Layout(vin.Context, unit.Px(float32(32)))
 								var logoMeniItem tema.DuoUIbutton
-								logoMeniItem = vin.Tema.DuoUIbutton("", "", "", vin.Tema.Colors["Dark"], "", "", "logo", vin.Tema.Colors["Light"], 0, 32, 32, 32, 0, 0, 0, 0)
+								logoMeniItem = vin.Тема.DuoUIbutton("", "", "", vin.Тема.Colors["Dark"], "", "", "logo", vin.Тема.Colors["Light"], 0, 32, 32, 32, 0, 0, 0, 0)
 								for logoBtn.Clicked(vin.Context) {
-									vin.Strana = "Novcanik"
+									vin.Страна = "Novcanik"
 								}
 								logoMeniItem.IconLayout(vin.Context, logoBtn)
 							}),
 							layout.Rigid(func() {
-								vin.Tema.DuoUIcontainer(0, vin.Tema.Colors["Plava"]).Layout(vin.Context, layout.Center, func() {
-									vin.Tema.H2("KRIPTO DRZAVA SRBIJA").Layout(vin.Context)
+								vin.Тема.DuoUIcontainer(0, vin.Тема.Colors["Plava"]).Layout(vin.Context, layout.Center, func() {
+									vin.Тема.H2("Крипто Држава Србија").Layout(vin.Context)
 								})
 							}),
 						)
 					}),
-					layout.Flexed(1, strana(vin)),
+					layout.Flexed(1, страна(vin)),
 				)
 				e.Frame(vin.Context.Ops)
 			}
@@ -88,65 +88,65 @@ func C() {
 	log.Print("Starting server...")
 }
 
-func DugmeZaIzbor(v *vincoin.VinCoin, dugme *gel.Button, sirinaMenija int, tekst string) func() {
+func ДугмеЗаИзбор(v *vincoin.ВинКоин, dugme *gel.Button, ширинаМенија int, tekst string) func() {
 	return func() {
-		v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, func() {
-			v.Context.Constraints.Width.Min = sirinaMenija
+		v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, func() {
+			v.Context.Constraints.Width.Min = ширинаМенија
 			for dugme.Clicked(v.Context) {
 				fmt.Println("IzbornikroditeL::", tekst)
-				v.Strana = tekst
+				v.Страна = tekst
 			}
-			v.Tema.Button(tekst).Layout(v.Context, dugme)
+			v.Тема.Button(tekst).Layout(v.Context, dugme)
 		})
 	}
 }
 
-func strana(v *vincoin.VinCoin) func() {
+func страна(v *vincoin.ВинКоин) func() {
 	return func() {
 		var pin string
-		sirinaMenija := 180
-		switch v.Strana {
+		ширинаМенија := 180
+		switch v.Страна {
 		case "Naslovna":
 			layout.Flex{
 				Axis: layout.Vertical,
 			}.Layout(v.Context,
-				layout.Rigid(DugmeZaIzbor(v, prijavaBtn, sirinaMenija, "Prijava za pinom")),
-				layout.Rigid(DugmeZaIzbor(v, registracijaBtn, sirinaMenija, "Registracija za potpuno nove clanove")),
-				layout.Rigid(DugmeZaIzbor(v, prijazalsBtn, sirinaMenija, "Prijava za clanove koji vec poseduju licnu sifru")),
-				layout.Rigid(DugmeZaIzbor(v, podesavanjaBtn, sirinaMenija, "Podesavanja")),
+				layout.Rigid(ДугмеЗаИзбор(v, prijavaBtn, ширинаМенија, "Пријава са пином")),
+				layout.Rigid(ДугмеЗаИзбор(v, registracijaBtn, ширинаМенија, "Регистрација за потпуно нове чланове")),
+				layout.Rigid(ДугмеЗаИзбор(v, prijazalsBtn, ширинаМенија, "Пријава за чланове који већ поседују личну шифру")),
+				layout.Rigid(ДугмеЗаИзбор(v, podesavanjaBtn, ширинаМенија, "Подешавања")),
 			)
-		case "Prijava za pinom":
+		case "Пријава са пином":
 			layout.Flex{
 				Axis: layout.Vertical,
 			}.Layout(v.Context,
 				layout.Rigid(func() {
-					v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, func() {
-						v.Tema.H5(pin).Layout(v.Context)
+					v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, func() {
+						v.Тема.H5(pin).Layout(v.Context)
 					})
 				}),
-				layout.Rigid(DugmeZaIzbor(v, prijavaBtn, sirinaMenija, "Novcanik")),
+				layout.Rigid(ДугмеЗаИзбор(v, prijavaBtn, ширинаМенија, "Novcanik")),
 			)
 		case "Novcanik":
 			layout.Flex{
 				Axis: layout.Vertical,
 			}.Layout(v.Context,
-				layout.Rigid(DugmeZaIzbor(v, licnasifraBtn, sirinaMenija, "Licna sifra (24 reci)")),
-				layout.Rigid(DugmeZaIzbor(v, racunBtn, sirinaMenija, "Racun (javni kljuc)")),
-				layout.Rigid(DugmeZaIzbor(v, novostiBtn, sirinaMenija, "Novosti")),
-				layout.Rigid(DugmeZaIzbor(v, stanjenaracunuBtn, sirinaMenija, "Stanje na racunu")),
-				layout.Rigid(DugmeZaIzbor(v, novauplataBtn, sirinaMenija, "Nova uplata")),
-				layout.Rigid(DugmeZaIzbor(v, aktuelnaglasanjaBtn, sirinaMenija, "Aktuelna glasanja")),
-				layout.Rigid(DugmeZaIzbor(v, rezultatiglasanjaBtn, sirinaMenija, "Rezultati glasanja")),
-				layout.Rigid(DugmeZaIzbor(v, proveraidentitetaBtn, sirinaMenija, "Provera identiteta")),
-				layout.Rigid(DugmeZaIzbor(v, podesavanjaBtn, sirinaMenija, "Podesavanja")),
+				layout.Rigid(ДугмеЗаИзбор(v, licnasifraBtn, ширинаМенија, "Licna sifra (24 reci)")),
+				layout.Rigid(ДугмеЗаИзбор(v, racunBtn, ширинаМенија, "Racun (javni kljuc)")),
+				layout.Rigid(ДугмеЗаИзбор(v, novostiBtn, ширинаМенија, "Novosti")),
+				layout.Rigid(ДугмеЗаИзбор(v, stanjenaracunuBtn, ширинаМенија, "Stanje na racunu")),
+				layout.Rigid(ДугмеЗаИзбор(v, novaуплатаBtn, ширинаМенија, "Nova уплата")),
+				layout.Rigid(ДугмеЗаИзбор(v, aktuelnaгласањаBtn, ширинаМенија, "Aktuelna гласања")),
+				layout.Rigid(ДугмеЗаИзбор(v, rezultatiгласањаBtn, ширинаМенија, "Rezultati гласања")),
+				layout.Rigid(ДугмеЗаИзбор(v, proveraidentitetaBtn, ширинаМенија, "Provera identiteta")),
+				layout.Rigid(ДугмеЗаИзбор(v, podesavanjaBtn, ширинаМенија, "Podesavanja")),
 			)
 		case "Licna sifra (24 reci)":
 			layout.Flex{
 				Axis: layout.Vertical,
 			}.Layout(v.Context,
 				layout.Rigid(func() {
-					v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, func() {
-						v.Tema.H5("BADEN BADEM MALI BADEM IMA BADEM NEMA BADEM ZEC TU SKOCI BADEM OCI KOME OCI BABEM BODEM").Layout(v.Context)
+					v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, func() {
+						v.Тема.H5("BADEN BADEM MALI BADEM IMA BADEM NEMA BADEM ZEC TU SKOCI BADEM OCI KOME OCI BABEM BODEM").Layout(v.Context)
 					})
 				}),
 			)
@@ -156,10 +156,10 @@ func strana(v *vincoin.VinCoin) func() {
 				Axis: layout.Vertical,
 			}.Layout(v.Context,
 				layout.Rigid(func() {
-					v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, func() { v.Tema.H4(pub).Layout(v.Context) })
+					v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, func() { v.Тема.H4(pub).Layout(v.Context) })
 				}),
 				layout.Rigid(func() {
-					v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, DuoUIqrCode(v.Context, pub, 256))
+					v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, DuoUIqrCode(v.Context, pub, 256))
 				}),
 			)
 
@@ -168,20 +168,20 @@ func strana(v *vincoin.VinCoin) func() {
 				Axis: layout.Vertical,
 			}.Layout(v.Context,
 				layout.Rigid(func() {
-					v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, func() {
-						v.Tema.H5("najnovije INFORMACIJE").Layout(v.Context)
+					v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, func() {
+						v.Тема.H5("najnovije INFORMACIJE").Layout(v.Context)
 					})
 				}),
 				layout.Rigid(func() {
-					v.Tema.DuoUIcontainer(12, v.Tema.Colors["White"]).Layout(v.Context, layout.Center, func() {
-						v.Tema.Body1("U Kripto Drzavi Srbije narod donosi sve vazne odluke. Budite aktivni korisnik sistema lanca blokova i izjasnite se o postavljenim pitanjima. Samo jednom se broji vas glas bez obzira koju opciju izaberete. Sistem lanaca blokova ce Bas za glasanje nagraditi sa 0.1VIN (Vinkoinom). Ako probate glasati bise puta lanac blokova ce vam sveki put obracunati troskove transakcije i odbiti glasanje kao nelegitimno.").Layout(v.Context)
+					v.Тема.DuoUIcontainer(12, v.Тема.Colors["White"]).Layout(v.Context, layout.Center, func() {
+						v.Тема.Body1("U Kripto Drzavi Srbije narod donosi sve vazne odluke. Budite aktivni korisnik sistema lanca blokova i izjasnite se o postavljenim pitanjima. Samo jednom se broji vas glas bez obzira koju opciju izaberete. Sistem lanaca blokova ce Bas za glasanje nagraditi sa 0.1VIN (Vinkoinom). Ako probate glasati bise puta lanac blokova ce vam sveki put obracunati troskove transakcije i odbiti glasanje kao nelegitimno.").Layout(v.Context)
 					})
 				}),
 			)
 		case "Stanje na racunu":
-		case "Nova uplata":
-		case "Aktuelna glasanja":
-		case "Rezultati glasanja":
+		case "Nova уплата":
+		case "Aktuelna гласања":
+		case "Rezultati гласања":
 		case "Provera identiteta":
 		case "Podesavanja":
 
@@ -196,7 +196,6 @@ func DuoUIqrCode(gtx *layout.Context, hash string, size uint) func() {
 		}
 		qrResize := resize.Resize(size, 0, qr, resize.NearestNeighbor)
 		addrQR := paint.NewImageOp(qrResize)
-
 		sz := gtx.Constraints.Width.Constrain(gtx.Px(unit.Dp(float32(size))))
 		addrQR.Add(gtx.Ops)
 		paint.PaintOp{

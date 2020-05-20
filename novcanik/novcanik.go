@@ -5,7 +5,7 @@ import (
 	"github.com/marcetin/vin/vincoin"
 )
 
-func glavniDeo(w *vincoin.VinCoin) func() {
+func glavniDeo(w *vincoin.ВинКоин) func() {
 	return func() {
 		if w.Edit {
 			layout.Flex{

@@ -27,18 +27,9 @@ func NewDuoUItheme() *DuoUItheme {
 		Shaper: font.Default(),
 	}
 	t.Colors = NewDuoUIcolors()
-	t.Fonts = NewDuoUIfonts()
 	t.TextSize = unit.Sp(16)
 	t.Icons = NewDuoUIicons()
 	return t
-}
-
-func NewDuoUIfonts() (f map[string]text.Typeface) {
-	f = make(map[string]text.Typeface)
-	f["Primary"] = "bariol"
-	f["Secondary"] = "plan9"
-	f["Mono"] = "go"
-	return f
 }
 
 func (t *DuoUItheme) ChangeLightDark() {

@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	novcanik.C()
+	novcanik.ВИН()
 }

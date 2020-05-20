@@ -9,16 +9,16 @@ import (
 	"github.com/marcetin/vin/pkg/tema"
 )
 
-func NewVinCoin() *VinCoin {
+func НовиВинКоин() *ВинКоин {
 	gofont.Register()
-	vin := &VinCoin{
-		Naziv: "Vincoin Novcanik",
+	vin := &ВинКоин{
+		Назив: "Vincoin Novcanik",
 		Window: app.NewWindow(
 			app.Size(unit.Dp(999), unit.Dp(999)),
 			app.Title("Vincoin Novcanik"),
 		),
-		Tema:             tema.NewDuoUItheme(),
-		Strana:           "Naslovna",
+		Тема:             tema.NewDuoUItheme(),
+		Страна:           "Naslovna",
 		Db:               db.DuoUIdbInit("./BAZA"),
 		PrikazaniElement: &model.WingVrstaRadova{},
 		Suma: &model.WingIzabraniElementi{
